@@ -1,0 +1,3 @@
+# TODORS
+
+Trying to learn Rust... Here is a basic cli todo app...
