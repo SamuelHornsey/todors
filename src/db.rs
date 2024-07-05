@@ -38,7 +38,7 @@ pub fn get_all() -> Result<Vec<Todo>> {
 }
 
 pub fn save(todo: Todo) -> Result<()> {
-    let conn = get_conn().expect("unable to get connection");
+    let conn = get_conn()?;
     conn.execute(
         "INSERT INTO todos (task, completed) VALUES (?, ?)", (&todo.task, &todo.completed))?;
     Ok(())
